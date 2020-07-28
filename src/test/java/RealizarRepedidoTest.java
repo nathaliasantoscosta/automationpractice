@@ -9,7 +9,7 @@ import support.TestBase;
 public class RealizarRepedidoTest extends TestBase {
 
     @Test
-    public void realizarCompraUmItem(){
+    public void realizarRepedido(){
         LoginPo loginPo = new LoginPo(driver);
         loginPo.clickLogin().fillEmail().fillSenha().clickSignIn();
 
