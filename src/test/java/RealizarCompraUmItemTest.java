@@ -17,7 +17,7 @@ public class RealizarCompraUmItemTest extends TestBase {
 
         SacolaPo sacolaPo = new SacolaPo(driver);
         sacolaPo.clickCheckout();
-        sacolaPo.fillMensagem().clickProcessAddress();
+        sacolaPo.fillMensagem().clickCheckout();
         sacolaPo.checkAgree().clickProcessShipping();
         sacolaPo.clickPagamento();
         sacolaPo.clickConfirmaOrdem();

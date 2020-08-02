@@ -39,16 +39,10 @@ public class HomePo {
         return this;
     }
 
-    public HomePo clickTamanho(){
-        WebElement element = driver.findElement(By.xpath("//*[@id=\"attributes\"]/fieldset[1]/div"));
-        Select combo = new Select(element);
-        combo.selectByVisibleText("M");
-        return this;
-    }
 
     private By searchButton  = By.id("search_query_top");
 
-    private By item = By.xpath("//*[@id=\"center_column\"]/ul/li/div/div[1]/div/a[1]/img");
+    private By item = By.xpath("//div[@class='product-image-container']");
 
     private By addItemButton = By.id("add_to_cart");
 
@@ -56,5 +50,5 @@ public class HomePo {
 
     private By collorWhiteButton = By.id("color_8");
 
-    private By tamanhoList = By.id("group_1");
+
 }

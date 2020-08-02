@@ -21,13 +21,7 @@ public class SacolaPo {
 
     public SacolaPo fillMensagem(){
         JavascriptExecutor jse = (JavascriptExecutor)driver;
-//        jse.executeScript("window.scrollBy(0,400)");
-        driver.findElement(MensagemInput).sendKeys("Entrega na portaria");
-        return this;
-    }
-
-    public SacolaPo clickProcessAddress(){
-        driver.findElement(processAddressButton).click();
+        driver.findElement(mensagemInput).sendKeys("Entrega na portaria");
         return this;
     }
 
@@ -76,23 +70,21 @@ public class SacolaPo {
         }
     }
 
-    private By checkoutButton = By.xpath("//*[@id=\"center_column\"]/p[2]/a[1]/span");
+    private By checkoutButton = By.xpath("//span[text()='Proceed to checkout']");
 
-    private By MensagemInput = By.xpath("//*[@id=\"ordermsg\"]/textarea");
-
-    private By processAddressButton = By.xpath("//*[@id=\"center_column\"]/form/p/button");
+    private By mensagemInput = By.xpath("//div[@id='ordermsg']/textarea");
 
     private By agreeCheck = By.id("cgv");
 
-    private By processShoppingButton = By.xpath("//*[@id=\"form\"]/p/button/span");
+    private By processShoppingButton = By.name("processCarrier");
 
     private By pagamentoButton = By.xpath("//a[contains(text(), 'Pay by bank wire')]");
 
-    private By confimaOrdemButton = By.xpath("//*[@id=\"cart_navigation\"]/button/span");
+    private By confimaOrdemButton = By.xpath("//span[text()='I confirm my order']");
 
-    private By messageSuccess = By.xpath("//strong[contains(text(), 'Your order on My Store is complete.')]");
+    private By messageSuccess = By.xpath("//p[@class='cheque-indent']/strong");
 
     private By trashButton = By.className("icon-trash");
 
-    private By messageCartEmpty = By.xpath("//*[@id=\"center_column\"]/p");
+    private By messageCartEmpty = By.cssSelector(".alert-warning");
 }

@@ -1,4 +1,3 @@
-import ecommercePages.HomePo;
 import ecommercePages.LoginPo;
 import ecommercePages.MyAccountPO;
 import ecommercePages.SacolaPo;
@@ -18,7 +17,7 @@ public class RealizarRepedidoTest extends TestBase {
 
         SacolaPo sacolaPo = new SacolaPo(driver);
         sacolaPo.clickCheckout();
-        sacolaPo.fillMensagem().clickProcessAddress();
+        sacolaPo.fillMensagem().clickCheckout();
         sacolaPo.checkAgree().clickProcessShipping();
         sacolaPo.clickPagamento();
         sacolaPo.clickConfirmaOrdem();
