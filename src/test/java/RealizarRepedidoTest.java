@@ -16,11 +16,11 @@ public class RealizarRepedidoTest extends TestBase {
         myAccountPO.clickOrder().clickReorderButton();
 
         SacolaPo sacolaPo = new SacolaPo(driver);
-        sacolaPo.clickCheckout();
-        sacolaPo.fillMensagem().clickCheckout();
-        sacolaPo.checkAgree().clickProcessShipping();
-        sacolaPo.clickPagamento();
-        sacolaPo.clickConfirmaOrdem();
+        sacolaPo.clickCheckout()
+                .fillMensagem().clickCheckout()
+                .checkAgree().clickProcessShipping()
+                .clickPagamento()
+                .clickConfirmaOrdem();
 
         Assert.assertTrue(sacolaPo.checkMensagemSucesso());
     }
